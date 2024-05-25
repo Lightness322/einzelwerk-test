@@ -176,27 +176,32 @@ const DropZoneFileList = <T extends FieldValues>({
   return (
     <ul className="flex flex-wrap gap-2">
       {files.map((file, index) => (
-        <DropZoneFileListItem key={nanoid()} onClick={() => deleteFile(index)}>
-          {file.name}
-        </DropZoneFileListItem>
+        <DropZoneFileListItem
+          name={file.name}
+          key={nanoid()}
+          onClick={() => deleteFile(index)}
+        />
       ))}
     </ul>
   );
 };
 
 type DropZoneFileListItemProps = {
-  children: ReactNode;
+  name: string;
   onClick: () => void;
 };
 
 const DropZoneFileListItem = ({
-  children,
+  name,
   onClick,
 }: Readonly<DropZoneFileListItemProps>) => {
   return (
-    <li className="relative inline-flex items-center gap-2 rounded-full bg-gray-100 px-[6px] py-[2px] pl-[26px] text-xs text-gray-950 before:absolute before:left-[6px] before:top-1/2 before:h-4 before:w-4 before:-translate-y-1/2 before:content-[url('/file.svg')]">
+    <li
+      title={name}
+      className="relative inline-flex items-center gap-2 rounded-full bg-gray-100 px-[6px] py-[2px] pl-[26px] text-xs text-gray-950 before:absolute before:left-[6px] before:top-1/2 before:h-4 before:w-4 before:-translate-y-1/2 before:content-[url('/file.svg')]"
+    >
       <span className="max-w-[200px] overflow-hidden overflow-ellipsis whitespace-nowrap">
-        {children}
+        {name}
       </span>
       <button
         className="relative h-5 w-5 after:absolute after:left-0 after:top-1/2 after:h-full after:w-full after:-translate-y-1/2 after:content-[url('/cross.svg')]"
