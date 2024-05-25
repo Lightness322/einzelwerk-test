@@ -50,7 +50,7 @@ const Checkbox = forwardRef<React.ElementRef<"input">, Readonly<CheckboxProps>>(
               "absolute left-0 top-0 h-full w-full rounded-lg hover:cursor-pointer hover:bg-indigo-100 peer-focus:outline peer-focus:outline-indigo-400",
               className,
               {
-                "after:absolute after:left-1/2 after:top-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:content-[url('check.svg')]":
+                "after:absolute after:left-1/2 after:top-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:content-[url('/check.svg')]":
                   isChecked,
               },
             )}

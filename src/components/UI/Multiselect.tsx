@@ -77,7 +77,7 @@ const Multiselect = <T extends FieldValues, K extends Option>({
     <div
       ref={outsideClickRef}
       className={cn(
-        "relative z-10 w-full rounded-[20px] bg-gray-100 after:absolute after:right-5 after:top-1/2 after:-z-[1] after:h-5 after:-translate-y-1/2 after:items-center after:content-[url('arrow.svg')]",
+        "relative z-10 w-full rounded-[20px] bg-gray-100 after:absolute after:right-5 after:top-1/2 after:-z-[1] after:h-5 after:-translate-y-1/2 after:items-center after:content-[url('/arrow.svg')]",
         { "after:rotate-180": isToggled },
       )}
     >

@@ -119,7 +119,7 @@ const DropZoneArea = <T extends FieldValues>({
           className={cn(
             "absolute left-0 top-0 h-full w-full rounded-[20px] border border-dashed border-gray-400 peer-hover:bg-gray-50 peer-focus:bg-gray-100",
             {
-              "after:absolute after:left-1/2 after:top-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:content-[url('plus.svg')]":
+              "after:absolute after:left-1/2 after:top-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:content-[url('/plus.svg')]":
                 !isDragging,
               "-z-[1] flex items-center justify-center": isDragging,
               "border-error": error,
@@ -194,12 +194,12 @@ const DropZoneFileListItem = ({
   onClick,
 }: Readonly<DropZoneFileListItemProps>) => {
   return (
-    <li className="relative inline-flex items-center gap-2 rounded-full bg-gray-100 px-[6px] py-[2px] pl-[26px] text-xs text-gray-950 before:absolute before:left-[6px] before:top-1/2 before:h-4 before:w-4 before:-translate-y-1/2 before:content-[url('file.svg')]">
+    <li className="relative inline-flex items-center gap-2 rounded-full bg-gray-100 px-[6px] py-[2px] pl-[26px] text-xs text-gray-950 before:absolute before:left-[6px] before:top-1/2 before:h-4 before:w-4 before:-translate-y-1/2 before:content-[url('/file.svg')]">
       <span className="max-w-[200px] overflow-hidden overflow-ellipsis whitespace-nowrap">
         {children}
       </span>
       <button
-        className="relative h-5 w-5 after:absolute after:left-0 after:top-1/2 after:h-full after:w-full after:-translate-y-1/2 after:content-[url('cross.svg')]"
+        className="relative h-5 w-5 after:absolute after:left-0 after:top-1/2 after:h-full after:w-full after:-translate-y-1/2 after:content-[url('/cross.svg')]"
         onClick={onClick}
         type="button"
       ></button>
